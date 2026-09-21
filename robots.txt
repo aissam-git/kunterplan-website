@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kunterplan.de/sitemap.xml

@@ -1,0 +1,9 @@
+'use strict';
+const thumbs=[...document.querySelectorAll('.gallery-thumbs button')];
+const img=document.getElementById('gallery-image');const cap=document.getElementById('gallery-caption');
+thumbs.forEach((b,i)=>{b.setAttribute('aria-pressed',String(i===0));b.addEventListener('click',()=>{img.src=b.dataset.full;img.alt=b.dataset.alt;cap.textContent=b.dataset.cap+(b.dataset.cap.includes('frontal')?' · vorhandene Vorlage':' · illustrative Musteransicht');thumbs.forEach(t=>t.setAttribute('aria-pressed',String(t===b)));});});
+const zoom=document.getElementById('zoom');img.addEventListener('click',()=>{document.getElementById('zoom-img').src=img.src;document.getElementById('zoom-img').alt=img.alt;zoom.showModal();});document.getElementById('zoom-close').addEventListener('click',()=>zoom.close());zoom.addEventListener('click',e=>{if(e.target===zoom)zoom.close();});
+const cfg=window.KUNTERPLAN_CONFIG||{};const wa=String(cfg.whatsappNumber||'').replace(/\D/g,'');const productName=document.body.dataset.productName||document.querySelector('h1')?.textContent?.trim()||'ein Produkt';
+const text=`Hallo KunterPlan,\n\nich interessiere mich für „${productName}“ und möchte gerne den Preis sowie die individuellen Gestaltungsmöglichkeiten anfragen.\n\nName für das Produkt:\nGewünschtes Format: A4 / A3\nWunschfarben / Design:\nIndividuelle Änderungen:\nWeitere Wünsche:\n\nBitte nennt mir vor der Bestellung den Gesamtpreis inklusive ggf. Versand. Vielen Dank!`;
+const waLink=document.querySelector('.product-whatsapp');if(waLink&&wa.length>=8&&wa.length<=16){waLink.href='https://wa.me/'+wa+'?text='+encodeURIComponent(text);waLink.target='_blank';waLink.rel='noopener noreferrer';waLink.textContent='Preis über WhatsApp anfragen ↗';}
+const ig=document.querySelector('.product-instagram');if(ig){ig.href='https://www.instagram.com/'+encodeURIComponent(cfg.instagramUsername||'kunterplan.858114')+'/';}

@@ -1,0 +1,29 @@
+
+/* V4 Galerie und Produktunterseiten */
+.sample-disclaimer{border:1px solid #d3e4ef;background:#f0f8fd;border-radius:16px;padding:23px 25px;margin-top:12px;margin-bottom:24px;color:#234363;line-height:1.65;font-size:.92rem}
+.product-badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 17px}.product-badges span{border-radius:99px;background:#edf6f8;color:#235579;padding:6px 10px;font-size:.69rem;font-weight:750}
+.product-more{font-size:.78rem;font-weight:750;color:#12508a;margin-top:14px;align-self:flex-start;text-decoration:underline;text-underline-offset:4px}
+.detail-image-wrap{position:relative;display:flex;align-items:center;justify-content:center;min-height:250px}.detail-image-wrap img{max-height:min(63vh,670px);width:100%;object-fit:contain}
+.image-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transform:rotate(-26deg);font-size:clamp(1.4rem,3vw,2.9rem);letter-spacing:.08em;font-weight:850;color:rgba(13,44,96,.24);pointer-events:none;text-align:center}
+.gallery-caption{text-align:center;color:#51677a;font-size:.77rem;margin:10px 0 14px}
+.supply-note{background:#fff7e5;border:1px solid #f5dfb8;padding:13px;border-radius:11px;font-size:.78rem}
+.product-page{background:#fff}.breadcrumbs{padding:32px 0 10px;color:#4f667a;font-size:.78rem}.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}
+.product-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:48px;align-items:start;padding:22px 0 80px}
+.product-page h1{font-size:clamp(2rem,3.5vw,3.25rem);letter-spacing:-.045em;line-height:1.14;margin:16px 0}.product-page .intro{font-size:1.02rem;color:#526b81}
+.product-page .gallery-main{background:#f7fafc;border:1px solid #dce8f0;border-radius:17px;padding:14px;position:relative;min-height:430px;display:grid;place-items:center}
+.product-page .gallery-main img{max-height:650px;object-fit:contain;margin:auto;border-radius:8px}.product-page .gallery-thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:14px 0 8px}
+.product-page .gallery-thumbs button{border:2px solid #dce8f0;border-radius:11px;background:#fff;padding:5px;min-width:0;text-align:center;color:#173b67}
+.product-page .gallery-thumbs button[aria-pressed=true]{border-color:#0d2c60;background:#eef7fe}
+.product-page .gallery-thumbs img{width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:4px}.product-page .gallery-thumbs span{display:block;font-size:.66rem;line-height:1.3;padding:6px 1px}
+.product-page .info-box{background:#f1f8fc;border-radius:12px;padding:18px 20px;margin:20px 0}.product-page .info-box p{margin:0;font-size:.84rem}
+.product-page .detail-specs{margin:25px 0}.product-page .product-how{padding:20px 23px;background:#fff9e9;border-radius:12px;border:1px solid #f0dfbc;margin:20px 0}
+.product-page .gallery-legal{font-size:.79rem;color:#51677a}.product-page .contact-choice{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.product-page .gallery-thumbs button:focus-visible{outline:3px solid #1381c9}
+.gallery-main img{cursor:zoom-in}
+.zoom-dialog{border:0;border-radius:14px;padding:16px;width:min(96vw,1450px);max-height:96vh;background:#fff;box-shadow:0 20px 70px #091d32a8}.zoom-dialog::backdrop{background:#07192edb}.zoom-dialog img{max-height:86vh;width:auto;margin:auto;object-fit:contain}.zoom-close{display:block;margin:0 0 8px auto;border-radius:8px;background:#0d2c60;color:white;border:0;padding:9px 17px}
+@media(max-width:800px){.product-layout{grid-template-columns:1fr;gap:22px;padding-bottom:38px}.product-page .gallery-main{min-height:200px}.product-page .gallery-thumbs span{font-size:.58rem}.sample-disclaimer{padding:16px 17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media(max-width:760px){.product-page .nav{display:flex;position:static;flex-direction:row;align-items:center;gap:0;padding:0;box-shadow:none;background:transparent}.product-page .nav>a:not(.nav-cta){display:none}.product-page .nav .nav-cta{font-size:.76rem;padding:10px 12px}}
+
+/* V5: Preis-/Anfragehinweise */
+.price-on-request{font-weight:800;color:#0D2C60;margin:.45rem 0 .65rem}.detail-inquiry-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}.inquiry-hint{font-size:.92rem;color:#56616f;margin-top:.7rem}.contact-choice{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}.product-back-link{font-weight:700;color:#0D2C60;text-decoration:underline;text-underline-offset:3px}.contact-actions .contact-placeholder{max-width:34rem}.product-page .contact-choice .btn{margin:0}
